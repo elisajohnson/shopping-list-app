@@ -1,2 +1,11 @@
-<h1>Groceries#show</h1>
-<p>Find me in app/views/groceries/show.html.erb</p>
+<strong>Name:</strong>
+<%= @grocery.groceries %>
+</p>
+
+<p>
+  <strong>Qty:</strong>
+  <%= @grocery.qty %>
+</p>
+
+<%= link_to 'Edit', edit_grocery_path(@grocery) %> |
+<%= link_to 'Back', groceries_path %>

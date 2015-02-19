@@ -1,15 +1,9 @@
 <%= form_for(@grocery) do |f| %>
-    <% if @grocery.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@grocery.errors.count, "error") %> prohibited this grocery from being saved:</h2>
 
-          <ul>
-            <% @grocery.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
+    <div class="field">
+      <%= f.label :users %><br>
+      <%= f.collection_select :user_id, User.all, :id, :username, include_blank: '' %>
+    </div>
 
     <div class="field">
       <%= f.label :groceries %><br>
