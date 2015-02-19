@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  groceries: MyString
+  qty: 1
+  user_id: 
+
+two:
+  groceries: MyString
+  qty: 1
+  user_id: 

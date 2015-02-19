@@ -1,0 +1,12 @@
+<h1>Sessions</h1>
+<h3><%= @user_created_message %></h3>
+
+<h1>Log in!</h1>
+<%= form_for @user, :url => { :controller => "sessions", :action => "create" } do |f| %>
+  Email: <%=f.text_field :email %> <br />
+  Password: <%= f.password_field :password %> <br />
+  <%= f.submit 'Log in' %>
+
+<% end %>
+
+<%= link_to 'New user? Create an account here', new_user_path %>
