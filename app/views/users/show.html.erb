@@ -1,4 +1,4 @@
-<h1>Welcome <%= @user.username %>!</h1>
-<p>You are now logged in.</p>
-
-<%=	 link_to 'Show all', groceries_path(current_user) %>
+<h1 class="show">Are you hungry?</h1>
+  <br />
+<p class="show"><%=	 link_to 'Add Some Food to Your Shopping List', groceries_path(current_user) %> </p>
+<br />

@@ -37,18 +37,17 @@ body {
 //  navbar div
   font-size: 20px;
   padding-top: 40px;
-  padding-bottom: 40px;
   font-family: $main-font;
 
   #userName {
 //    user greeting
-    padding-left: 40px;
+    padding-left: 88px;
     display: inline;
   }
 
-  #logOut {
+  .logOut {
 //    logout link // props to Josh for helping me display inLine correctly
-    padding-right: 40px;
+    padding-right: 88px;
     text-align: right;
     float: right;
     display: inline-block;
@@ -58,25 +57,30 @@ body {
 .jumbotron {
 //  image div
   margin: auto;
-  background-image: url("/assets/carving_board.jpg");
-  -webkit-filter: grayscale(.3);
-  background-position: cover;
-  width: 95%;
-//  max-width: 100%;
-//  max-height: 100%;
-//    width: 1152px;
-//    height: 363px;
+  width: 972px;
+  height: 350px;
   background-color: white;
+}
+
+.food {
+  -webkit-filter: blur(.5px) grayscale(.4);
+  overflow: hidden;
+  max-width: 100%;
+  margin:auto;
+  position: relative;
+
 }
 
 .title {
 
   margin: auto;
   color: #E6E8E7;
-  font-size: 89px;
+  font-size: 50px;
   font-family: $main-font;
-//  padding-top: 140px;
-//  padding-left: 30px;
+  z-index: 10;
+  position: absolute;
+  padding-left: 30px;
+  padding-top: 10px;
 
 }
 

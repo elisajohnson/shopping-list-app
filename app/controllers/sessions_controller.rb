@@ -9,7 +9,10 @@ class SessionsController < ApplicationController
     u = User.where(email: params[:user][:email]).first
     if u != nil && u.authenticate(params[:user][:password])
       session['user_id'] = u.id.to_s
-      redirect_to groceries_path(session[''])
+      # path directly to shopping list
+      # redirect_to groceries_path(session[''])
+      # path to user landing page
+      redirect_to user_path(u)
     else
       # if it doesn't authenticate it will be redirected to the new session again
       redirect_to new_session_path
