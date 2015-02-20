@@ -3,18 +3,37 @@
 <head>
   <title>ShoppingList</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
-<% if current_user != nil %>
-<%= current_user.username %> is logged in.
-    <%= button_to "Log out", session_path(current_user), method: :delete %>
+
+<br />
+
+<div class="body">
+  <div class="nav">
+    <% if current_user != nil %>
+      <p id="userName">Hello <%= current_user.username %></p>
+      <p id="logOut"><%= link_to "Log out", session_path(current_user), method: :delete %></p>
+      <%#   = link_to "Shopping List", groceries_path(current_user)%>
     <% else %>
-    <%= button_to "Sign up", new_user_path, method: :get %>
-<% end %>
+      <p><%= link_to "Sign up", new_user_path, method: :get %></p>
+    <% end %>
+  </div>
+
+  <div class="jumbotron">
+    <div class="title">s</div>
+  </div>
+  <br />
+  <br />
 
 <%= yield %>
+
+</div>
+
+<br />
 
 </body>
 </html>
