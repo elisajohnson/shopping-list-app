@@ -1,11 +1,27 @@
-<h1>Sign Up!</h1>
-<%= form_for @user do |f|%>
-  Username: <%= f.text_field :username %> <br />
-  Email: <%= f.text_field :email %> <br />
-  Password: <%= f.password_field :password %> <br />
-  Password Confirmation: <%= f.password_field :password_confirmation %> <br />
+<h1 class="userTitle">Sign Up</h1>
+<br />
+<%#= form_for @user do |f|%>
+    <%= bootstrap_form_for(@user, html: { class: 'form-horizontal' }) do |f| %>
 
-  <%=f.submit %>
+    <div class="form-group">
+        <%= f.text_field :username %>
+    </div>
+
+    <div class="form-group">
+        <%= f.text_field :email %>
+    </div>
+
+    <div class="form-group">
+        <%= f.password_field :password %>
+    </div>
+
+    <div class="form-group">
+        <%= f.password_field :password_confirmation %>
+    </div>
+
+    <%=f.submit %>
 
 <% end %>
+<br />
+<div class="logIn"><%= link_to 'Already a User? Log In.', new_session_path %></div>
 <br />

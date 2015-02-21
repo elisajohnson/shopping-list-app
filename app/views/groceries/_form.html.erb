@@ -1,21 +1,24 @@
-<%= form_for(@grocery) do |f| %>
+<!--bootstrap form for inputting new groceries-->
+<%= bootstrap_form_for(@grocery, html: { class: 'form-inline' }) do |f| %>
 
-    <div class="field">
-      <%= f.label :users %><br>
+    <!--User selection-->
+    <div class="form-group">
       <%= f.collection_select :user_id, User.all, :id, :username, include_blank: '' %>
     </div>
 
-    <div class="field">
-      <%= f.label :groceries %><br>
+    <!--Grocery input-->
+    <div class="form-group">
       <%= f.text_field :groceries %>
     </div>
 
-
-    <div class="field">
-      <%= f.label :qty %><br>
+    <!--Quantity input-->
+    <div class="form-group">
       <%= f.number_field :qty %>
     </div>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
+
+    <!--Create grocery button-->
+      <%= f.submit "Add Your Grocery" %>
+
 <% end %>
+
+

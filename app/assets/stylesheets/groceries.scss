@@ -12,6 +12,28 @@ $main-font: 'Muli', sans-serif;
 
 .index {
   width: 75%;
+  font-family: $main-font;
   padding-left: 80px;
 
+}
+
+.shoppingLink {
+  font-family: $main-font;
+  padding-left: 80px;
+  padding-bottom: 15px;
+}
+
+.groceryTitle {
+  font-family: $main-font;
+  padding-left: 80px;
+}
+
+.form-inline {
+  font-family: $main-font;
+  padding-left: 80px;
+  display: inline-block;
+}
+
+.form-group {
+  padding-right: 110px;
 }

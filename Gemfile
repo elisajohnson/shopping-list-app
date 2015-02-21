@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 # twitter bootstrap gem
 gem 'bootstrap-sass', '~>3.2.0'
+# twitter bootstrap form gem
+gem 'bootstrap_forms'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
