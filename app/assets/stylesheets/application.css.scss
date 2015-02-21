@@ -54,7 +54,7 @@ body {
   }
 }
 
-.jumbotron {
+.header {
 //  image div
   margin: auto;
   width: 972px;
@@ -63,11 +63,14 @@ body {
 }
 
 .food {
+  background: asset-url('carving_board6.jpg');
   -webkit-filter: blur(.5px) grayscale(.4);
   overflow: hidden;
   max-width: 100%;
+  height: 350px;
   margin:auto;
   position: relative;
+  background-repeat: no-repeat;
 
 }
 
@@ -75,12 +78,12 @@ body {
 
   margin: auto;
   color: #E6E8E7;
-  font-size: 50px;
   font-family: $main-font;
-  z-index: 10;
+  font-size: 55px;
   position: absolute;
   padding-left: 30px;
   padding-top: 10px;
 
 }
+
 
