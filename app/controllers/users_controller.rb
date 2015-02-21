@@ -9,6 +9,8 @@ class UsersController < ApplicationController
     if user.save
       # redirect to the new session if the user is successfully created
       redirect_to new_session_path(user_created: 'true')
+    else
+      redirect_to new_user_path
     end
   end
 

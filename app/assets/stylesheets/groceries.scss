@@ -1,3 +1,17 @@
 // Place all the styles related to the groceries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$main-font: 'Muli', sans-serif;
+
+.groceryIndex {
+  font-family: $main-font;
+  padding-left: 83px;
+
+}
+
+.index {
+  width: 75%;
+  padding-left: 80px;
+
+}
