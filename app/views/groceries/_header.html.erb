@@ -1,0 +1,29 @@
+<body>
+
+<br />
+
+<div class="body">
+  <div class="nav">
+    <% if current_user != nil %>
+        <p id="userName"><%= link_to "Hello", user_path(current_user) %> <%= current_user.username %></p>
+        <p class="logOut"><%= link_to "Log out", session_path(current_user), method: :delete %></p>
+        <%#   = link_to "Shopping List", groceries_path(current_user)%>
+    <% else %>
+        <p class="logOut"><%= link_to "Create an Account", new_user_path, method: :get %></p>
+    <% end %>
+  </div>
+
+  <div class="header">
+    <div class="food">
+      <p class="title">Shopping List</p>
+      <!--<div class="title">Shopping List</div>-->
+    </div>
+    <!--<img class="food" alt="food" title="food" src="/assets/carving_board5.jpg" />-->
+  </div>
+
+
+  <%= yield %>
+
+</div>
+
+</body>

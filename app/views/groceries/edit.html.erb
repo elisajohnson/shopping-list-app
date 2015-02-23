@@ -1,7 +1,11 @@
-<h1 class="groceryTitle">Edit Grocery</h1>
-<br />
-<%= render 'form' %>
-<br />
-<br />
-<br />
-<div class="shoppingLink"><%= link_to 'Back to Your Shopping List', groceries_path %></div>
+<%= render 'header' %>
+<div class="editGrocery">
+    <h1 class="groceryTitle">Edit Grocery</h1>
+    <br />
+
+    <%= render 'form' %>
+    <br />
+    <br />
+
+    <div class="listLink"><%= link_to 'Back to Your Shopping List', groceries_path %></div>
+</div>

@@ -1,7 +1,14 @@
-<h1 class="groceryTitle">New Grocery</h1>
+<%= render 'header' %>
+
+<div class="newGrocery">
+
+  <h1 class="groceryTitle">New Item</h1>
 <br />
-<%= render 'form' %>
+
+  <%= render 'form' %>
 <br />
 <br />
-<br />
-<div class="shoppingLink"><%= link_to 'Back to Your Shopping List', groceries_path %></div>
+
+  <div class="shopLink"><%= link_to 'Back to Your Shopping List', groceries_path %></div>
+  <br />
+</div>

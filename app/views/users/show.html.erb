@@ -1,4 +1,8 @@
-<h1 class="show">Are you hungry?</h1>
-  <br />
-<p class="show"><%=	 link_to 'Add Some Food to Your Shopping List', groceries_path(current_user) %> </p>
-<br />
+<%= render 'header' %>
+<div class="showPage">
+    <h1 class="show">Are you hungry?</h1>
+    <br />
+
+    <p class="addLink"><%=	 link_to 'Add Some Food to Your Shopping List', groceries_path(current_user) %> </p>
+    <br />
+</div>

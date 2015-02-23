@@ -4,22 +4,78 @@
 
 $main-font: 'Muli', sans-serif;
 
+//new user styling
+.newUser {
+  font-family: $main-font;
+  background: asset-url('figs-avocado.jpg');
+  -webkit-filter: grayscale(0.3);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .show {
+  font-family: $main-font;
   padding-left: 83px;
-  font-family: $main-font;
 }
 
-.userTitle {
+.formSquare {
   font-family: $main-font;
-  padding-left: 430px;
+  margin-top: 20px;
+  background-color: #504641;
+  -webkit-filter: opacity(.7);
+  height: 450px;
+  width: 250px;
+  margin-left: 750px;
+  position: relative;
+  border-radius: 1.5%;
+//  display: inline-flex;
+
+  .title {
+    font-family: $main-font;
+    color: #E6E8E7;
+    font-size: 45px;
+    margin-left: 15px;
+  }
 }
 
-.form-horizontal {
-  font-family: $main-font;
-  padding-left: 450px;
+
+.form-vertical {
+  position: absolute;
+  width: 100%;
+  margin-left: -396px;
+  margin-top: 70px;
+}
+
+.form-group {
+  text-align: left;
+  margin-top: -15px;
+  -webkit-filter: opacity(3);
+  color: #E6E8E7;
 }
 
 .logIn {
   font-family: $main-font;
-  padding-left: 430px;
+  margin-top: 383px;
+  margin-left: 52px;
+
+}
+
+//user header styling
+.showPage {
+  background-color: white;
+  width: 1024px;
+  height: 145px;
+  margin-left: 128px;
+  margin-top: -20px;
+  margin-bottom: 25px;
+
+  .show {
+    padding-top: 30px;
+  }
+
+  .addLink {
+    font-family: $main-font;
+    margin-left: 80px;
+    padding-bottom: 30px;
+  }
 }

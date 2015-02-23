@@ -1,3 +1,54 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$main-font: 'Muli', sans-serif;
+
+.logInTitle {
+  font-family: $main-font;
+  padding-left: 450px;
+}
+
+.form-group {
+  font-family: $main-font;
+  padding-left: 450px;
+}
+
+//new session styling
+.newSession {
+  font-family: $main-font;
+  background: asset-url('figs-avocado.jpg');
+  -webkit-filter: grayscale(0.3);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+//.show {
+//  font-family: $main-font;
+//  padding-left: 83px;
+//}
+
+.formSquare {
+  font-family: $main-font;
+  margin-top: 20px;
+  background-color: #504641;
+  -webkit-filter: opacity(.7);
+  height: 400px;
+  width: 250px;
+  margin-left: 750px;
+  position: relative;
+  border-radius: 1.5%;
+  //  display: inline-flex;
+
+  .logInTitle {
+    font-family: $main-font;
+    color: #E6E8E7;
+    font-size: 45px;
+    margin-left: -400px;
+    padding-top: 25px;
+  }
+
+  .form-group {
+    margin-left: -400px;
+  }
+}

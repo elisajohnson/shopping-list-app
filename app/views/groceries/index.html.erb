@@ -1,32 +1,37 @@
-<h1 class="groceryIndex">Your Shopping List</h1>
-<br />
-<div class="index">
-<table class="table table-hover">
-  <thead>
-  <tr>
-    <th>Item</th>
-    <th>Quantity</th>
-    <th>Edit</th>
-    <th>Delete</th>
-  </tr>
-  </thead>
+<%= render 'header' %>
 
-  <tbody>
-  <% @groceries.each do |grocery| %>
-      <tr>
+<div class="indexPage">
+  <h1 class="groceryIndex"><%=current_user.username %>'s Shopping List</h1>
+  <br />
+    <div class="index">
+      <table class="table table-hover">
+        <thead>
+        <tr>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Edit</th>
+        <th>Purchased</th>
+        </tr>
+        </thead>
+
+        <tbody>
+            <% @groceries.each do |grocery| %>
+        <tr>
         <td><%= grocery.groceries %></td>
         <td><%= grocery.qty %></td>
         <!--Grocery show page unnecessary-->
         <!--<td><%#= link_to 'Show', grocery %></td>-->
         <td><%= link_to 'Edit', edit_grocery_path(grocery) %></td>
-        <td><%= link_to 'Delete', grocery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-  <% end %>
-  </tbody>
-</table>
-</div>
-<br />
+        <td><%= link_to 'Purchased', grocery, method: :delete, data: { confirm: 'Enjoy!' } %></td>
+        </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
 
-<div class="shoppingLink"><%= link_to 'Add to Your Shopping List', new_grocery_path %><br/></div>
+  <div class="shoppingLink"><%= link_to 'Add to Your Shopping List', new_grocery_path %><br/></div>
+</div>
+
+<br />
 <!--Grocery index link redundant-->
 <%#=	 link_to 'Show all', groceries_path %>
